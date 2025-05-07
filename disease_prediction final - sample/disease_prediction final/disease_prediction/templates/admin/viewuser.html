@@ -1,0 +1,49 @@
+{% extends 'adminindex1.html' %}
+{% block body %}
+    <form action="/viewuser_name_search_post" method="POST">
+
+        <label for="name">Name:</label>
+  <input type="text" name="name"  placeholder="Enter name">
+  <input type="submit" value="Search">
+</form>
+
+   <table class="table  table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Si.No</th>
+      <th scope="col"><div align="center"> Name</div></th>
+      <th scope="col">Address</th>
+
+      <th scope="col">DOB</th>
+      <th scope="col">Phoneno</th>
+
+        <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in val %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ i.name }}</td>
+
+
+
+      <td>{{ i.place }},<br>
+          {{ i.post }},<br>
+           {{ i.pin }}.</td>
+      <td>{{ i.dob }}</td>
+      <td>{{ i.phone }}</td>
+
+     <!-- <td>
+          {% if i.reply == "pending" %}
+  <a href="/sendreply/{{ i.id }}">reply</a><br/>
+{% else %}
+  {{ i.reply }}
+{% endif %}
+
+</td>-->
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

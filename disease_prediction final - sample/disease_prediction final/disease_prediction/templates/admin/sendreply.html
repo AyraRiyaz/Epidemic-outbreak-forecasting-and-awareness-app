@@ -1,0 +1,54 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reply Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .reply-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="reply-form">
+    <form action="/send_reply_post" method="POST">
+        <input type="hidden" name="id" value="{{ comp.id }}">
+        Complaint : {{ comp.complaint }}<br><br>
+      <label for="reply">Your Reply:</label>
+      <textarea id="reply" name="reply" placeholder="Type your reply here..."></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+</body>
+</html>

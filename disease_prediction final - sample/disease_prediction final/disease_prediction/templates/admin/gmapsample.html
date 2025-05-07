@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps with Multiple Markers</title>
+    <style>
+        /* Set the size of the map */
+        #map {
+            height: 100vh;  /* Full height */
+            width: 100%;    /* Full width */
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3y0szjZmNj_w2q9Vnc08ZL_FU6Z4VTFE"></script>
+    <script>
+        function initMap() {
+            // Define the map and set its center and zoom level
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 5,
+                center: { lat: 20.5937, lng: 78.9629 }  // Center of India
+            });
+
+            // Define marker locations
+            const locations = [
+
+{#                {'lat': 11.448933333333333, 'lng': 76.10116666666666, 'title': 'Debris_slide@Maripuzha'}, {'lat': 11.453494444444443, 'lng': 76.10404444444444, 'title': 'Debris_flow@Vellarimala'}, {'lat': 11.452499999999999, 'lng': 76.10138055555555, 'title': 'Slump@Maripuzha'}, {'lat': 11.4498, 'lng': 76.10138333333333, 'title': 'Slump@Maripuzha'}, {'lat': 11.44753888888889, 'lng': 76.09581388888888, 'title': 'Slump@Maripuzha'}, {'lat': 11.047675, 'lng': 76.08517499999999, 'title': 'Debris_flow@Karimb'}, {'lat': 11.40951388888889, 'lng': 76.05263333333333, 'title': 'slump@Kodukkatupaara'}, {'lat': 11.363469444444444, 'lng': 76.09527777777777, 'title': 'Debris_flow@Nayadampoyil'}, {'lat': 11.34208888888889, 'lng': 76.10778333333333, 'title': 'Debris_flow@Valaamthod'}, {'lat': 11.331325, 'lng': 76.10090833333332, 'title': 'Slump@Thazhe'}, {'lat': 11.320913888888889, 'lng': 76.09132222222222, 'title': 'Slump@Peedikapaara'}, {'lat': 11.327552777777777, 'lng': 76.08036666666666, 'title': 'Debris_flow@Kurishumala'}, {'lat': 11.319294444444445, 'lng': 76.08036666666666, 'title': 'Debris_flow@Thanikunnu'}, {'lat': 11.358655555555556, 'lng': 76.04647222222222, 'title': 'Slump@Mullampori'}, {'lat': 11.358594444444444, 'lng': 76.05695, 'title': 'Cracks@Kuliraammutti'}, {'lat': 11.34435, 'lng': 76.06122222222221, 'title': 'Debris_flow@Kalpeeni'}, {'lat': 11.557372222222224, 'lng': 75.91638333333334, 'title': 'Slump@Kakkayam'}, {'lat': 5.108758333333333, 'lng': 75.91411666666667, 'title': 'Slump@Kakkayam'}, {'lat': 11.55788888888889, 'lng': 75.91563611111111, 'title': 'Slump@Kakkayam'}, {'lat': 11.551583333333333, 'lng': 75.91598333333334, 'title': 'Slump@Kakkayam'}, {'lat': 11.551194444444445, 'lng': 75.91560555555556, 'title': 'Debris_flow@Near'}, {'lat': 4.192222222222222, 'lng': 60.57436944444444, 'title': 'Debris_flow@Near'}, {'lat': 11.54998611111111, 'lng': 75.91392777777779, 'title': 'Slump@Kakkayam'}, {'lat': 11.556055555555556, 'lng': 75.91496944444445, 'title': 'Rockfall@Kakkayam'}, {'lat': 11.557241666666668, 'lng': 75.91299166666667, 'title': 'Rockfall@Kakkayam'}, {'lat': 11.557277777777779, 'lng': 75.9126638888889, 'title': 'Rockfall@Kakkayam'}, {'lat': 11.557241666666668, 'lng': 75.91230555555556, 'title': 'Debris_flow@Kakkayam'}, {'lat': 11.55797777777778, 'lng': 75.91004444444445, 'title': 'Slump@Kakkayam'}, {'lat': 11.561713888888889, 'lng': 75.90556388888889, 'title': 'Slump@Kakkayam'}, {'lat': 11.567508333333333, 'lng': 75.89863611111112, 'title': 'Slump@Kakkayam'}, {'lat': 11.567452777777778, 'lng': 75.8988138888889, 'title': 'Slump@Kakkayam'}, {'lat': 11.555919444444445, 'lng': 75.90508055555556, 'title': 'Slump@Kakkayam'}, {'lat': 11.551241666666668, 'lng': 75.90301111111111, 'title': 'Debris_flow@Kakkayam'}, {'lat': 11.526947222222223, 'lng': 75.86368333333333, 'title': 'Debris_flow@Illipillayimala'}, {'lat': 8.191944444444445, 'lng': 44.463591666666666, 'title': 'Debris_flow@Poovathumchola'}, {'lat': 11.522758333333334, 'lng': 75.88829444444445, 'title': 'Slump@Kallanodu'}, {'lat': 11.516491666666667, 'lng': 75.89285555555556, 'title': 'Slump@26th'}, {'lat': 11.50243888888889, 'lng': 75.89280833333333, 'title': 'Slump@Thalayad'}, {'lat': 11.511644444444444, 'lng': 75.88877222222223, 'title': 'Slump@25th'}, {'lat': 11.512619444444445, 'lng': 75.88839722222222, 'title': 'Slump@26th'}, {'lat': 11.46668611111111, 'lng': 75.92033611111111, 'title': 'Debris_flow@Karinjolamala'}, {'lat': 11.729344444444445, 'lng': 75.81315, 'title': 'Slump@Kuttiyadi'}, {'lat': 11.729466666666667, 'lng': 75.81414166666666, 'title': 'Slump@Pakrathalam'}, {'lat': 11.729491666666666, 'lng': 75.81414444444444, 'title': 'Slump@Pakrathalam'}, {'lat': 11.80225277777778, 'lng': 75.76049444444445, 'title': 'Slump@Pannyeri'}, {'lat': 11.779619444444446, 'lng': 75.75595, 'title': 'Slump@Koothadikunnu'}, {'lat': 11.773133333333334, 'lng': 75.25946666666667, 'title': 'Slump@Aalummoola'}, {'lat': 11.789644444444445, 'lng': 75.784125, 'title': 'Debris_flow@Valiyapaanam'}, {'lat': 11.792108333333333, 'lng': 75.78911111111111, 'title': 'Debris_flow@Valiyapaanam'}, {'lat': 11.459824999999999, 'lng': 76.03834166666667, 'title': 'Debris_flow@Vendekkampoyil'}, {'lat': 11.430688888888888, 'lng': 76.00731944444445, 'title': 'Slump@Kodenchery'}, {'lat': 11.353119444444443, 'lng': 75.92105833333333, 'title': 'Slump@Chembattamel'}, {'lat': 11.51336388888889, 'lng': 76.0214, 'title': 'Slump@Thamarassery'}, {'lat': 30.703333333333333, 'lng': 76.01848055555556, 'title': 'Slump@Thamarassery'}, {'lat': 11.511388888888888, 'lng': 76.02083333333333, 'title': 'Slump@Thamarassery'}, {'lat': 11.512241666666666, 'lng': 76.01686111111111, 'title': 'Slump@Thamarassery'}, {'lat': 11.512416666666667, 'lng': 76.01648333333333, 'title': 'Slump@Thamarassery'}, {'lat': 11.513261111111111, 'lng': 76.01606666666666, 'title': 'Slump@Thamarassery'}, {'lat': 11.514141666666667, 'lng': 76.015825, 'title': 'Slump@Thamarassery'}, {'lat': 11.514855555555556, 'lng': 76.01566944444444, 'title': 'Slump@Thamarassery'}, {'lat': 11.515205555555555, 'lng': 76.01528333333333, 'title': 'Slump@Thamarassery'}, {'lat': 11.516169444444444, 'lng': 76.0142, 'title': 'Slump@Thamarassery'}, {'lat': 11.514091666666667, 'lng': 76.01502222222223, 'title': 'Slump@Thamarassery'}, {'lat': 11.510858333333333, 'lng': 76.0211861111111, 'title': 'Slump@Thamarassery'}, {'lat': 11.510333333333334, 'lng': 76.02305555555556, 'title': 'Slump@Thamarassery'}, {'lat': 11.488930555555555, 'lng': 76.02361388888889, 'title': 'Slump@Thamarassery'}, {'lat': 11.52226388888889, 'lng': 75.98908888888889, 'title': 'Debris_flow@Kanappankund'}, {'lat': 11.505963888888889, 'lng': 75.99139722222222, 'title': 'Slum@Eduthuvechakallu'}, {'lat': 11.4462667, 'lng': 75.7162582, 'title': 'Slum@Ulliyeri'}, {'lat': 11.348479, 'lng': 75.756490, 'title': 'Slum@Paloramala'}#}
+           ];
+            {% for i in val %}
+
+                locations.push({'lat': {{ i.lat }}, 'lng': {{ i.lng }}, 'title': '{{ i.title }}'})
+            {% endfor %}
+
+            // Loop through the locations and place markers on the map
+            locations.forEach(location => {
+                const marker = new google.maps.Marker({
+                    position: { lat: location.lat, lng: location.lng },
+                    map: map,
+                    title: location.title
+                });
+            });
+        }
+    </script>
+</head>
+<body onload="initMap()">
+    <div id="map"></div>
+</body>
+</html>

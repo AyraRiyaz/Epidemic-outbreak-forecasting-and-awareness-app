@@ -1,0 +1,96 @@
+{% extends 'hospital/base.html' %}
+{% block body %}
+
+  <body>
+    <main class="main" id="top">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
+        <div class="container"><a class="navbar-brand" href="#"><img src="/static/hospital/public/assets/img/gallery/logo.png" width="118" alt="logo" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
+          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="/patient_reg">Patient Info</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="/hos_view_patients">View Patients</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="/">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="py-xxl-10 pb-0" id="home">
+        <div class="container">
+          <div class="row min-vh-xl-100 min-vh-xxl-25">
+            <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="/static/hospital/public/assets/img/gallery/hero.png" alt="hero-header" /></div>
+            <div class="col-md-75 col-xl-6 col-xxl-5 text-md-start text-center py-6">
+              <h1 class="fw-light font-base fs-6 fs-xxl-7">Easily <strong>Access </strong><br />your&nbsp;<strong>Hospital</strong></h1>
+              <p class="fs-1 mb-5">You can track the patients details<br></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="py-5" id="departments">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 py-3">
+              <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/bg-departments.png);background-position:top center;background-size:contain;">
+              </div>
+              <h1 class="text-center">OUR DEPARTMENTS</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="py-0">
+        <div class="container">
+          <div class="row py-5 align-items-center justify-content-center justify-content-lg-evenly">
+            <div class="col-auto col-md-4 col-lg-auto text-xl-start">
+              <div class="d-flex flex-column align-items-center">
+                <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="/static/hospital/public/assets/img/icons/neurology.png" alt="..." /><img class="mb-3 deparment-icon-hover" src="/static/hospital/public/assets/img/icons/neurology.svg" alt="..." />
+                    <p class="fs-1 fs-xxl-2 text-center">Neurology</p>
+                  </a></div>
+              </div>
+            </div>
+            <div class="col-auto col-md-4 col-lg-auto text-xl-start">
+              <div class="d-flex flex-column align-items-center">
+                <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="/static/hospital/public/assets/img/icons/eye-care.png" alt="..." /><img class="mb-3 deparment-icon-hover" src="/static/hospital/public/assets/img/icons/eye-care.svg" alt="..." />
+                    <p class="fs-1 fs-xxl-2 text-center">Eye care</p>
+                  </a></div>
+              </div>
+            </div>
+            <div class="col-auto col-md-4 col-lg-auto text-xl-start">
+              <div class="d-flex flex-column align-items-center">
+                <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="/static/hospital/public/assets/img/icons/cardiac.png" alt="..." /><img class="mb-3 deparment-icon-hover" src="/static/hospital/public/assets/img/icons/cardiac.svg" alt="..." />
+                    <p class="fs-1 fs-xxl-2 text-center">Cardiac care</p>
+                  </a></div>
+              </div>
+            </div>
+            <div class="col-auto col-md-4 col-lg-auto text-xl-start">
+              <div class="d-flex flex-column align-items-center">
+                <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="/static/hospital/public/assets/img/icons/heart.png" alt="..." /><img class="mb-3 deparment-icon-hover" src="/static/hospital/public/assets/img/icons/heart.svg" alt="..." />
+                    <p class="fs-1 fs-xxl-2 text-center">Heart care</p>
+                  </a></div>
+              </div>
+            </div>
+            <div class="col-auto col-md-4 col-lg-auto text-xl-start">
+              <div class="d-flex flex-column align-items-center">
+                <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="/static/hospital/public/assets/img/icons/osteoporosis.png" alt="..." /><img class="mb-3 deparment-icon-hover" src="/static/hospital/public/assets/img/icons/osteoporosis.svg" alt="..." />
+                    <p class="fs-1 fs-xxl-2 text-center">Osteoporosis</p>
+                  </a></div>
+              </div>
+            </div>
+            <div class="col-auto col-md-4 col-lg-auto text-xl-start">
+              <div class="d-flex flex-column align-items-center">
+                <div class="icon-box text-center"><a class="text-decoration-none" href="#!"><img class="mb-3 deparment-icon" src="/static/hospital/public/assets/img/icons/ent.png" alt="..." /><img class="mb-3 deparment-icon-hover" src="/static/hospital/public/assets/img/icons/ent.svg" alt="..." />
+                    <p class="fs-1 fs-xxl-2 text-center">ENT</p>
+                  </a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section></main>
+
+
+{% endblock %}

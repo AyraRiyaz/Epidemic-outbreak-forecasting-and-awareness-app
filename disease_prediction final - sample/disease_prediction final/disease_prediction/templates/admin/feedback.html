@@ -1,0 +1,42 @@
+{% extends 'adminindex1.html' %}
+{% block body %}
+    <form action="feedback_date_search_post" method="POST">
+
+        <label for="date_from">Date from:</label>
+  <input type="date" name="from" value="Date from:" placeholder="Enter date">
+        <label for="to">To:</label>
+  <input type="date" name="to" value="To" placeholder="Enter till date">
+  <input type="submit" value="Search">
+</form>
+
+   <table class="table  table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Si no.</th>
+      <th scope="col"><div align="center"> feedback </div></th>
+      <th scope="col">user</th>
+
+      <th scope="col">date</th>
+        <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in val %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ i.feedback }}</td>
+      <td>{{ i.PATIENT.name }}</td>
+      <td>{{ i.date }}</td>
+ <!--     <td>
+          {% if i.reply == "pending" %}
+  <a href="/sendreply/{{ i.id }}">reply</a><br/>
+{% else %}
+  {{ i.reply }}
+{% endif %}
+
+</td>-->
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

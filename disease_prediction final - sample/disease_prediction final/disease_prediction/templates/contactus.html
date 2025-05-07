@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Disease Outbreak Forecasting</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f8f9fa; /* Light gray background */
+            color: #333; /* Dark text for readability */
+        }
+
+        .contact-section {
+            padding: 80px 0;
+            background: #ffffff; /* White background */
+        }
+
+        .contact-section h1 {
+            color: #2575FC; /* Blue heading */
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .contact-section h2 {
+            color: #2575FC; /* Blue subheading */
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .contact-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555; /* Dark gray text */
+        }
+
+        .contact-form {
+            background: #f1f2f7; /* Light gray background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .contact-form .form-control {
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .contact-form .form-control:focus {
+            border-color: #2575FC; /* Blue border on focus */
+            box-shadow: none;
+        }
+
+        .contact-form .btn-primary {
+            background: #2575FC; /* Blue button */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        .contact-form .btn-primary:hover {
+            background: #1a5bbf; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>Contact Us</h1>
+                    <p class="lead">We'd love to hear from you! Reach out to us for any questions or feedback.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <!-- Contact Form -->
+                <div class="col-md-6 offset-md-3"> <!-- Centered the form -->
+                    <div class="contact-form">
+                        <h2>Send Us a Message</h2>
+                        <form action="https://api.web3forms.com/submit" method="POST" class="php-email-form">
+    <!-- Hidden Input for Access Key -->
+    <input type="hidden" name="access_key" value="18ad4257-3e8b-4713-adfa-45286a67f849">
+
+    <!-- Name Field -->
+    <div class="form-group">
+        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+    </div>
+
+    <!-- Email Field -->
+    <div class="form-group">
+        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+    </div>
+
+    <!-- Subject Field -->
+    <div class="form-group">
+        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+    </div>
+
+    <!-- Message Field -->
+    <div class="form-group">
+        <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

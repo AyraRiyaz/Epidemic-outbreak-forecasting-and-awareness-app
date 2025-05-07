@@ -1,0 +1,41 @@
+{% extends 'hospital/base.html' %}
+{% block body %}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">User Information</h2>
+    <div class="row">
+        {% for i in val %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <!-- Si.No -->
+                    <h6 class="text-muted">#{{ forloop.counter }}</h6>
+
+                    <!-- Name -->
+                    <h4 class="card-title text-center">{{ i.name }}</h4>
+
+                    <!-- Address -->
+                    <p class="card-text">
+                        <strong>Address:</strong><br>
+                        {{ i.place }},<br>
+                        {{ i.post }},<br>
+                        {{ i.pin }}.
+                    </p>
+
+                    <!-- Phone -->
+                    <p class="card-text">
+                        <strong>Phone:</strong> {{ i.phone }}
+                    </p>
+
+                    <!-- Add Info Link -->
+                    <div class="text-center mt-3">
+                        <a href="/addinfo/{{ i.id }}" class="btn btn-primary btn-sm">Add Info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

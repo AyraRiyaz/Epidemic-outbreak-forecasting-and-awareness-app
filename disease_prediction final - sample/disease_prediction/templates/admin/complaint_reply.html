@@ -1,0 +1,46 @@
+{% extends 'adminindex1.html' %}
+{% block body %}
+    <form action="complaint_date_search_post" method="POST">
+
+        <label for="date_from">Date from:</label>
+  <input type="date" name="from" value="Date from:" placeholder="Enter date">
+        <label for="to">To:</label>
+  <input type="date" name="to" value="To" placeholder="Enter till date">
+  <input type="submit" value="Submit">
+</form>
+
+   <table class="table  table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Si.No</th>
+      <th scope="col"><div align="center"> Userinfo</div></th>
+      <th scope="col">complaint</th>
+
+      <th scope="col">date</th>
+      <th scope="col">Reply</th>
+        <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in val %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ i.PATIENT.name }}</td>
+
+
+
+      <td>{{ i.complaint }}</td>
+      <td>{{ i.date }}</td>
+      <td>
+          {% if i.reply == "pending" %}
+  <a href="/sendreply/{{ i.id }}">reply</a><br/>
+{% else %}
+  {{ i.reply }}
+{% endif %}
+
+</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

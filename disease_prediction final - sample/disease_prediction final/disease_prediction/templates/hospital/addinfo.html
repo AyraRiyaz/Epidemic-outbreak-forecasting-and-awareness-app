@@ -1,0 +1,51 @@
+{% extends 'hospital/base.html' %}
+{% block body %}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Card Design -->
+            <div class="card shadow-lg p-4">
+                <div class="card-body">
+                    <h2 class="text-center mb-4">Add Information</h2>
+                    <form action="/addinfo_post" method="post" enctype="multipart/form-data">{% csrf_token %}
+
+                        <!-- Disease Field -->
+                        <div class="form-group mb-3">
+                            <label for="disease" class="form-label">Disease</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" id="disease" name="disease" placeholder="Disease" required>
+                            </div>
+                        </div>
+
+                        <!-- Prescription Field -->
+                        <div class="form-group mb-3">
+                            <label for="prescription" class="form-label">Prescription</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa fa-file" aria-hidden="true"></i></span>
+                                <input type="file" class="form-control" id="prescription" name="prescription" required>
+                            </div>
+                        </div>
+
+                        <!-- Report Field -->
+                        <div class="form-group mb-3">
+                            <label for="report" class="form-label">Report</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa fa-file-alt" aria-hidden="true"></i></span>
+                                <input type="file" class="form-control" id="report" name="report" required>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button class="btn btn-danger btn-block" type="submit">
+                            Add Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
