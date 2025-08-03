@@ -470,7 +470,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact & Support
 
-- **Email**: ayrariyaz@example.com
+- **Email**: riyazayra@gmail.com
 - **GitHub**: [@AyraRiyaz](https://github.com/AyraRiyaz)
 - **Institution**: MEA Engineering College
 
